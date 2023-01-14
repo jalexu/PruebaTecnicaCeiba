@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import Resolver
 
 @main
 struct PruebaTecnicaCeibaApp: App {
+    private var viewModel = Resolver.resolve(UserViewModel.self)
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UsersView(viewModel: viewModel)
         }
     }
 }

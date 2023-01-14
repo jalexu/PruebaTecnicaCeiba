@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - UserPublishig
 public struct UserPublishig: Codable, Hashable {
     let userID: Int
     let id: Int

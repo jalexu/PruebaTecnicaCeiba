@@ -7,8 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C24E28022972DD5100FC296D /* UserPublishingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28012972DD5100FC296D /* UserPublishingRepository.swift */; };
+		C24E28042972DE0000FC296D /* UserPublishingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28032972DE0000FC296D /* UserPublishingViewModel.swift */; };
+		C24E28092972E19F00FC296D /* UserPublishingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28082972E19F00FC296D /* UserPublishingInteractor.swift */; };
+		C24E280B2972E1C700FC296D /* AnyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E280A2972E1C700FC296D /* AnyInteractor.swift */; };
+		C24E280D2972F59A00FC296D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E280C2972F59A00FC296D /* UserViewModel.swift */; };
+		C24E280F2972F6FA00FC296D /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E280E2972F6FA00FC296D /* UserInteractor.swift */; };
+		C24E28112972F9CF00FC296D /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28102972F9CF00FC296D /* UsersView.swift */; };
+		C24E28172972FEBB00FC296D /* userViewModel+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28162972FEBB00FC296D /* userViewModel+Inject.swift */; };
+		C24E28192973029C00FC296D /* PruebaTecnicaCeiba+inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28182973029C00FC296D /* PruebaTecnicaCeiba+inject.swift */; };
+		C24E281B297307BE00FC296D /* UserPublishingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E281A297307BE00FC296D /* UserPublishingCellView.swift */; };
+		C24E281D297307F500FC296D /* UserPublishingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E281C297307F500FC296D /* UserPublishingView.swift */; };
+		C24E281F29730AAF00FC296D /* UserPublishingViewModel+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E281E29730AAF00FC296D /* UserPublishingViewModel+Inject.swift */; };
 		C258BCED2972348B00FF089D /* PruebaTecnicaCeibaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BCEC2972348B00FF089D /* PruebaTecnicaCeibaApp.swift */; };
-		C258BCEF2972348B00FF089D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BCEE2972348B00FF089D /* ContentView.swift */; };
 		C258BCF12972348C00FF089D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258BCF02972348C00FF089D /* Assets.xcassets */; };
 		C258BCF42972348C00FF089D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258BCF32972348C00FF089D /* Preview Assets.xcassets */; };
 		C258BCFE2972348C00FF089D /* PruebaTecnicaCeibaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BCFD2972348C00FF089D /* PruebaTecnicaCeibaTests.swift */; };
@@ -55,9 +66,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C24E28012972DD5100FC296D /* UserPublishingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingRepository.swift; sourceTree = "<group>"; };
+		C24E28032972DE0000FC296D /* UserPublishingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingViewModel.swift; sourceTree = "<group>"; };
+		C24E28082972E19F00FC296D /* UserPublishingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingInteractor.swift; sourceTree = "<group>"; };
+		C24E280A2972E1C700FC296D /* AnyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyInteractor.swift; sourceTree = "<group>"; };
+		C24E280C2972F59A00FC296D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		C24E280E2972F6FA00FC296D /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		C24E28102972F9CF00FC296D /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		C24E28162972FEBB00FC296D /* userViewModel+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "userViewModel+Inject.swift"; sourceTree = "<group>"; };
+		C24E28182973029C00FC296D /* PruebaTecnicaCeiba+inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PruebaTecnicaCeiba+inject.swift"; sourceTree = "<group>"; };
+		C24E281A297307BE00FC296D /* UserPublishingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingCellView.swift; sourceTree = "<group>"; };
+		C24E281C297307F500FC296D /* UserPublishingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingView.swift; sourceTree = "<group>"; };
+		C24E281E29730AAF00FC296D /* UserPublishingViewModel+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserPublishingViewModel+Inject.swift"; sourceTree = "<group>"; };
 		C258BCE92972348B00FF089D /* PruebaTecnicaCeiba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnicaCeiba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C258BCEC2972348B00FF089D /* PruebaTecnicaCeibaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTecnicaCeibaApp.swift; sourceTree = "<group>"; };
-		C258BCEE2972348B00FF089D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C258BCF02972348C00FF089D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C258BCF32972348C00FF089D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C258BCF92972348C00FF089D /* PruebaTecnicaCeibaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaTecnicaCeibaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +136,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C24E28052972E15500FC296D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C24E280A2972E1C700FC296D /* AnyInteractor.swift */,
+				C24E28072972E18800FC296D /* Publising */,
+				C24E28062972E18100FC296D /* User */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C24E28062972E18100FC296D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C24E280E2972F6FA00FC296D /* UserInteractor.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C24E28072972E18800FC296D /* Publising */ = {
+			isa = PBXGroup;
+			children = (
+				C24E28082972E19F00FC296D /* UserPublishingInteractor.swift */,
+			);
+			path = Publising;
+			sourceTree = "<group>";
+		};
+		C24E28122972FDE500FC296D /* PruebaTecnicaData */ = {
+			isa = PBXGroup;
+			children = (
+				C258BD4A297252A800FF089D /* Repository */,
+				C258BD392972488900FF089D /* Network */,
+			);
+			path = PruebaTecnicaData;
+			sourceTree = "<group>";
+		};
+		C24E28132972FE4300FC296D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C24E28152972FE8600FC296D /* UserPublishing */,
+				C24E28142972FE7A00FC296D /* User */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		C24E28142972FE7A00FC296D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C24E28162972FEBB00FC296D /* userViewModel+Inject.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C24E28152972FE8600FC296D /* UserPublishing */ = {
+			isa = PBXGroup;
+			children = (
+				C24E281E29730AAF00FC296D /* UserPublishingViewModel+Inject.swift */,
+			);
+			path = UserPublishing;
+			sourceTree = "<group>";
+		};
 		C258BCE02972348B00FF089D = {
 			isa = PBXGroup;
 			children = (
@@ -139,15 +221,16 @@
 			children = (
 				C258BD16297235DA00FF089D /* Info.plist */,
 				C258BCEC2972348B00FF089D /* PruebaTecnicaCeibaApp.swift */,
-				C258BCEE2972348B00FF089D /* ContentView.swift */,
+				C24E28182973029C00FC296D /* PruebaTecnicaCeiba+inject.swift */,
 				C258BCF02972348C00FF089D /* Assets.xcassets */,
 				C258BD1B29723FC800FF089D /* MVVM */,
 				C258BD2D2972442F00FF089D /* Base */,
 				C258BD332972454100FF089D /* Utils */,
 				C258BD472972518300FF089D /* Extension */,
-				C258BD4A297252A800FF089D /* Repository */,
-				C258BD392972488900FF089D /* Network */,
+				C24E28052972E15500FC296D /* Interactor */,
+				C24E28122972FDE500FC296D /* PruebaTecnicaData */,
 				C258BD1729723F1A00FF089D /* DataBase */,
+				C24E28132972FE4300FC296D /* DI */,
 				C258BCF22972348C00FF089D /* Preview Content */,
 			);
 			path = PruebaTecnicaCeiba;
@@ -200,6 +283,9 @@
 			isa = PBXGroup;
 			children = (
 				C258BD542972594600FF089D /* UserCellView.swift */,
+				C24E28102972F9CF00FC296D /* UsersView.swift */,
+				C24E281A297307BE00FC296D /* UserPublishingCellView.swift */,
+				C24E281C297307F500FC296D /* UserPublishingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +313,7 @@
 			children = (
 				C258BD212972414700FF089D /* UserPublishingDetailState.swift */,
 				C258BD2B2972431700FF089D /* UserPublishingViewModelContract.swift */,
+				C24E28032972DE0000FC296D /* UserPublishingViewModel.swift */,
 			);
 			path = Publishing;
 			sourceTree = "<group>";
@@ -236,6 +323,7 @@
 			children = (
 				C258BD232972420C00FF089D /* UserContract.swift */,
 				C258BD252972422E00FF089D /* UserDetailState.swift */,
+				C24E280C2972F59A00FC296D /* UserViewModel.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -289,6 +377,7 @@
 			children = (
 				C258BD4B297252D800FF089D /* GeneralRepository.swift */,
 				C258BD502972534700FF089D /* UserRepository.swift */,
+				C24E28012972DD5100FC296D /* UserPublishingRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -435,23 +524,34 @@
 			files = (
 				C258BD4C297252D800FF089D /* GeneralRepository.swift in Sources */,
 				C258BD222972414700FF089D /* UserPublishingDetailState.swift in Sources */,
+				C24E281D297307F500FC296D /* UserPublishingView.swift in Sources */,
+				C24E28172972FEBB00FC296D /* userViewModel+Inject.swift in Sources */,
 				C258BD362972457700FF089D /* Constants.swift in Sources */,
 				C258BD552972594600FF089D /* UserCellView.swift in Sources */,
+				C24E28042972DE0000FC296D /* UserPublishingViewModel.swift in Sources */,
 				C258BD3C2972492800FF089D /* APIRequest.swift in Sources */,
 				C258BD2F2972445300FF089D /* BaseViewModel.swift in Sources */,
 				C258BD412972499D00FF089D /* NetworkServiceType.swift in Sources */,
 				C258BD282972425D00FF089D /* UserModel.swift in Sources */,
 				C258BD242972420C00FF089D /* UserContract.swift in Sources */,
+				C24E28022972DD5100FC296D /* UserPublishingRepository.swift in Sources */,
 				C258BD382972460900FF089D /* CostumErrors.swift in Sources */,
 				C258BD1A29723F5000FF089D /* PruebaTecnicaCeibaDB.xcdatamodeld in Sources */,
 				C258BD2A2972429700FF089D /* UserPublishig.swift in Sources */,
 				C258BD4629724A4A00FF089D /* NetworkService.swift in Sources */,
+				C24E28092972E19F00FC296D /* UserPublishingInteractor.swift in Sources */,
+				C24E281B297307BE00FC296D /* UserPublishingCellView.swift in Sources */,
 				C258BD262972422E00FF089D /* UserDetailState.swift in Sources */,
-				C258BCEF2972348B00FF089D /* ContentView.swift in Sources */,
+				C24E280B2972E1C700FC296D /* AnyInteractor.swift in Sources */,
+				C24E280F2972F6FA00FC296D /* UserInteractor.swift in Sources */,
 				C258BD44297249DA00FF089D /* NetworkContract.swift in Sources */,
+				C24E281F29730AAF00FC296D /* UserPublishingViewModel+Inject.swift in Sources */,
 				C258BD2C2972431700FF089D /* UserPublishingViewModelContract.swift in Sources */,
 				C258BCED2972348B00FF089D /* PruebaTecnicaCeibaApp.swift in Sources */,
+				C24E28112972F9CF00FC296D /* UsersView.swift in Sources */,
+				C24E28192973029C00FC296D /* PruebaTecnicaCeiba+inject.swift in Sources */,
 				C258BD512972534700FF089D /* UserRepository.swift in Sources */,
+				C24E280D2972F59A00FC296D /* UserViewModel.swift in Sources */,
 				C258BD49297251AC00FF089D /* URLSession+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +721,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -652,6 +753,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

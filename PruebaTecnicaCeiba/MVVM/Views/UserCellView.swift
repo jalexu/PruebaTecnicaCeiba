@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct UserCellView: View {
     //MARK: -PROPERTIES
@@ -66,15 +67,19 @@ struct UserCellView: View {
                 })
             }
             
-//            NavigationLink(
-//                destination: UserPublishingView(
-//                    viewModel: UserPublishingViewModel(input: UserPublishingViewModel.InputDependences(user: user))),
-//                isActive: $showPublishingView,
-//                label: {
-//                    EmptyView()
-//                })
+            NavigationLink(
+                destination: UserPublishingView(viewModel: getUserPublishingViewModel()),
+                isActive: $showPublishingView,
+                label: {
+                    EmptyView()
+                })
         }
         
+    }
+    
+    private func getUserPublishingViewModel() -> UserPublishingViewModel {
+        UserPublishingViewModel(user: user,
+                                userPublishingInteractor: Resolver.resolve(UserPublishingInteractor.self))
     }
 }
 

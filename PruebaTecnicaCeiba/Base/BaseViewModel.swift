@@ -11,7 +11,7 @@ class BaseViewModel {
     
     init() { }
     
-    static var loading: Bool = false {
+    var loading: Bool = false {
         didSet {
             if loading {
                 RappleActivityIndicatorView.startAnimating()
@@ -21,4 +21,3 @@ class BaseViewModel {
         }
     }
 }
-

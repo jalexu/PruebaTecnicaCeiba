@@ -8,6 +8,6 @@
 import SwiftUI
 
 protocol UserViewModelType: ObservableObject, Identifiable {
-    var user: UserDetailState { get set }
+    var state: UserDetailState { get set }
     func getUserService()
 }

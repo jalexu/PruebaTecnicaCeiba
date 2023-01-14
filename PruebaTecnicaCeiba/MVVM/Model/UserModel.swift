@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - UserModel
 public struct UserModel: Codable, Hashable {
     let id: Int
     let name: String
@@ -20,7 +19,6 @@ public struct UserModel: Codable, Hashable {
     
 }
 
-// MARK: - Address
 struct Address: Codable, Hashable {
     let street: String
     let suite: String
@@ -29,13 +27,11 @@ struct Address: Codable, Hashable {
     let geo: Geo
 }
 
-// MARK: - Geo
 struct Geo: Codable, Hashable {
     let lat: String
     let lng: String
 }
 
-// MARK: - Company
 struct Company: Codable, Hashable {
     let name: String
     let catchPhrase: String
