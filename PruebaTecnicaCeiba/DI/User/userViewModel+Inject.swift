@@ -31,7 +31,8 @@ extension Resolver {
     
     private static func registerUserViewModel() {
         register(UserViewModel.self) { resolver in
-            UserViewModel(getUsersInteractor: resolver.resolve(UserInteractor.self))
+            UserViewModel(getUsersInteractor: resolver.resolve(UserInteractor.self),
+                          coreDataInteractor: resolver.resolve(CoreDataRepositoryType.self))
         }
     }
 }

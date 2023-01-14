@@ -12,13 +12,16 @@ import SwiftUI
 final class UserViewModel: BaseViewModel {
     
     private let getUsersInteractor: AnyInteractor<Any?, [UserModel]>
+    private let coreDataInteractor: CoreDataRepositoryType
     
     private var subscribers: Set<AnyCancellable> = []
     
     @Published var state = UserDetailState()
     
-    init(getUsersInteractor: AnyInteractor<Any?, [UserModel]>) {
+    init(getUsersInteractor: AnyInteractor<Any?, [UserModel]>,
+         coreDataInteractor: CoreDataRepositoryType) {
         self.getUsersInteractor = getUsersInteractor
+        self.coreDataInteractor = coreDataInteractor
     }
     
     private func updateState(updater: () -> Void) {
@@ -33,6 +36,7 @@ final class UserViewModel: BaseViewModel {
                 guard case .failure(let error) = completion else { return }
                 self?.loading = false
             }, receiveValue: { [weak self] users in
+                self?.saveOnCoreData(with: users)
                 self?.loading = false
                 self?.updateState {
                     self?.state.users = users
@@ -40,11 +44,48 @@ final class UserViewModel: BaseViewModel {
             })
             .store(in: &subscribers)
     }
+    
+    private func saveOnCoreData(with usersData: [UserModel]) {
+        self.loading = true
+        for data in usersData {
+            coreDataInteractor.save(with: data)
+                .sink(receiveCompletion: { [weak self] completion in
+                    guard case .failure(let error) = completion else { return }
+                    self?.loading = false
+                    print(error.localizedDescription)
+                }, receiveValue: { [weak self] _ in
+                    self?.loading = false
+                    print("User has been save on coreData")
+                }).store(in: &subscribers)
+        }
+    }
+    
+    private func getUserFromCoreData() {
+        coreDataInteractor.retriveData()
+            .sink(receiveCompletion: { [weak self] completion in
+                guard case .failure(let error) = completion else { return }
+                self?.loading = false
+                print(error.localizedDescription)
+            }, receiveValue: { [weak self] dataUsers in
+                self?.loading = false
+                self?.validateUserOnCoreData(dataUsers)
+            }).store(in: &subscribers)
+    }
+    
+    private func validateUserOnCoreData(_ users: [UserModel]) {
+        if users.isEmpty {
+            getUser()
+        } else {
+            updateState {
+                state.users = users
+            }
+        }
+    }
 }
 
 extension UserViewModel: UserViewModelType  {
     func getUserService() {
-        getUser()
+        getUserFromCoreData()
     }
 }
 

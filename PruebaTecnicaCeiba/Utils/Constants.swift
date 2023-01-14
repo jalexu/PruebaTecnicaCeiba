@@ -17,7 +17,7 @@ public struct Constants {
     }
     
     enum CoreDataBase {
-        static let nameDatabase = "TestCeiba"
+        static let nameDatabase = "PruebaTecnicaCeibaDB"
     }
     
     struct URLPaths {

@@ -19,6 +19,13 @@
 		C24E281B297307BE00FC296D /* UserPublishingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E281A297307BE00FC296D /* UserPublishingCellView.swift */; };
 		C24E281D297307F500FC296D /* UserPublishingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E281C297307F500FC296D /* UserPublishingView.swift */; };
 		C24E281F29730AAF00FC296D /* UserPublishingViewModel+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E281E29730AAF00FC296D /* UserPublishingViewModel+Inject.swift */; };
+		C24E28212973357200FC296D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28202973357200FC296D /* CoreDataManager.swift */; };
+		C24E2823297335B500FC296D /* CoreDataManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E2822297335B500FC296D /* CoreDataManagerType.swift */; };
+		C24E28252973370500FC296D /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28242973370500FC296D /* CoreDataService.swift */; };
+		C24E2827297337DD00FC296D /* UsersWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E2826297337DD00FC296D /* UsersWrapper.swift */; };
+		C24E282A2973391A00FC296D /* CoreDataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28292973391A00FC296D /* CoreDataInteractor.swift */; };
+		C24E282C297339CB00FC296D /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E282B297339CB00FC296D /* CoreDataRepository.swift */; };
+		C24E282F2973412700FC296D /* CoreData+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E282E2973412700FC296D /* CoreData+Inject.swift */; };
 		C258BCED2972348B00FF089D /* PruebaTecnicaCeibaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BCEC2972348B00FF089D /* PruebaTecnicaCeibaApp.swift */; };
 		C258BCF12972348C00FF089D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258BCF02972348C00FF089D /* Assets.xcassets */; };
 		C258BCF42972348C00FF089D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258BCF32972348C00FF089D /* Preview Assets.xcassets */; };
@@ -78,6 +85,13 @@
 		C24E281A297307BE00FC296D /* UserPublishingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingCellView.swift; sourceTree = "<group>"; };
 		C24E281C297307F500FC296D /* UserPublishingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingView.swift; sourceTree = "<group>"; };
 		C24E281E29730AAF00FC296D /* UserPublishingViewModel+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserPublishingViewModel+Inject.swift"; sourceTree = "<group>"; };
+		C24E28202973357200FC296D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C24E2822297335B500FC296D /* CoreDataManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerType.swift; sourceTree = "<group>"; };
+		C24E28242973370500FC296D /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		C24E2826297337DD00FC296D /* UsersWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersWrapper.swift; sourceTree = "<group>"; };
+		C24E28292973391A00FC296D /* CoreDataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataInteractor.swift; sourceTree = "<group>"; };
+		C24E282B297339CB00FC296D /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		C24E282E2973412700FC296D /* CoreData+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Inject.swift"; sourceTree = "<group>"; };
 		C258BCE92972348B00FF089D /* PruebaTecnicaCeiba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnicaCeiba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C258BCEC2972348B00FF089D /* PruebaTecnicaCeibaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTecnicaCeibaApp.swift; sourceTree = "<group>"; };
 		C258BCF02972348C00FF089D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C24E280A2972E1C700FC296D /* AnyInteractor.swift */,
+				C24E2828297338BE00FC296D /* CoreData */,
 				C24E28072972E18800FC296D /* Publising */,
 				C24E28062972E18100FC296D /* User */,
 			);
@@ -174,6 +189,7 @@
 		C24E28132972FE4300FC296D /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				C24E282D297340E800FC296D /* CoreData */,
 				C24E28152972FE8600FC296D /* UserPublishing */,
 				C24E28142972FE7A00FC296D /* User */,
 			);
@@ -194,6 +210,22 @@
 				C24E281E29730AAF00FC296D /* UserPublishingViewModel+Inject.swift */,
 			);
 			path = UserPublishing;
+			sourceTree = "<group>";
+		};
+		C24E2828297338BE00FC296D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C24E28292973391A00FC296D /* CoreDataInteractor.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C24E282D297340E800FC296D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C24E282E2973412700FC296D /* CoreData+Inject.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		C258BCE02972348B00FF089D = {
@@ -265,6 +297,10 @@
 			isa = PBXGroup;
 			children = (
 				C258BD1829723F5000FF089D /* PruebaTecnicaCeibaDB.xcdatamodeld */,
+				C24E28202973357200FC296D /* CoreDataManager.swift */,
+				C24E2822297335B500FC296D /* CoreDataManagerType.swift */,
+				C24E28242973370500FC296D /* CoreDataService.swift */,
+				C24E2826297337DD00FC296D /* UsersWrapper.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -378,6 +414,7 @@
 				C258BD4B297252D800FF089D /* GeneralRepository.swift */,
 				C258BD502972534700FF089D /* UserRepository.swift */,
 				C24E28012972DD5100FC296D /* UserPublishingRepository.swift */,
+				C24E282B297339CB00FC296D /* CoreDataRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -522,6 +559,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24E2827297337DD00FC296D /* UsersWrapper.swift in Sources */,
+				C24E28252973370500FC296D /* CoreDataService.swift in Sources */,
 				C258BD4C297252D800FF089D /* GeneralRepository.swift in Sources */,
 				C258BD222972414700FF089D /* UserPublishingDetailState.swift in Sources */,
 				C24E281D297307F500FC296D /* UserPublishingView.swift in Sources */,
@@ -532,16 +571,20 @@
 				C258BD3C2972492800FF089D /* APIRequest.swift in Sources */,
 				C258BD2F2972445300FF089D /* BaseViewModel.swift in Sources */,
 				C258BD412972499D00FF089D /* NetworkServiceType.swift in Sources */,
+				C24E282C297339CB00FC296D /* CoreDataRepository.swift in Sources */,
 				C258BD282972425D00FF089D /* UserModel.swift in Sources */,
 				C258BD242972420C00FF089D /* UserContract.swift in Sources */,
 				C24E28022972DD5100FC296D /* UserPublishingRepository.swift in Sources */,
 				C258BD382972460900FF089D /* CostumErrors.swift in Sources */,
+				C24E28212973357200FC296D /* CoreDataManager.swift in Sources */,
 				C258BD1A29723F5000FF089D /* PruebaTecnicaCeibaDB.xcdatamodeld in Sources */,
 				C258BD2A2972429700FF089D /* UserPublishig.swift in Sources */,
 				C258BD4629724A4A00FF089D /* NetworkService.swift in Sources */,
 				C24E28092972E19F00FC296D /* UserPublishingInteractor.swift in Sources */,
 				C24E281B297307BE00FC296D /* UserPublishingCellView.swift in Sources */,
 				C258BD262972422E00FF089D /* UserDetailState.swift in Sources */,
+				C24E2823297335B500FC296D /* CoreDataManagerType.swift in Sources */,
+				C24E282F2973412700FC296D /* CoreData+Inject.swift in Sources */,
 				C24E280B2972E1C700FC296D /* AnyInteractor.swift in Sources */,
 				C24E280F2972F6FA00FC296D /* UserInteractor.swift in Sources */,
 				C258BD44297249DA00FF089D /* NetworkContract.swift in Sources */,
@@ -551,6 +594,7 @@
 				C24E28112972F9CF00FC296D /* UsersView.swift in Sources */,
 				C24E28192973029C00FC296D /* PruebaTecnicaCeiba+inject.swift in Sources */,
 				C258BD512972534700FF089D /* UserRepository.swift in Sources */,
+				C24E282A2973391A00FC296D /* CoreDataInteractor.swift in Sources */,
 				C24E280D2972F59A00FC296D /* UserViewModel.swift in Sources */,
 				C258BD49297251AC00FF089D /* URLSession+Extension.swift in Sources */,
 			);
