@@ -22,6 +22,11 @@ final class UserPublishingViewModel: BaseViewModel {
         self.userPublishingInteractor = userPublishingInteractor
     }
     
+    private func updateState(updater: () -> Void) {
+        updater()
+        objectWillChange.send()
+    }
+    
     private func getPublishing() {
         loading = true
         userPublishingInteractor.execute(params: user.id)
@@ -30,8 +35,10 @@ final class UserPublishingViewModel: BaseViewModel {
                 guard case .failure(let error) = completion else { return }
                 self?.loading = false
             }, receiveValue: { [weak self] publishigValues in
-                self?.state.listUserPublishig = publishigValues
                 self?.loading = false
+                self?.updateState {
+                    self?.state.listUserPublishig = publishigValues
+                }
             })
             .store(in: &subscribers)
     }

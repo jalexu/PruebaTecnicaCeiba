@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import Resolver
 
 final class UserViewModel: BaseViewModel {
     
@@ -86,6 +87,11 @@ final class UserViewModel: BaseViewModel {
 extension UserViewModel: UserViewModelType  {
     func getUserService() {
         getUserFromCoreData()
+    }
+    
+    func getUserPublishingViewModel(user: UserModel) -> UserPublishingViewModel {
+        UserPublishingViewModel(user: user,
+                                userPublishingInteractor: Resolver.resolve(UserPublishingInteractor.self))
     }
 }
 

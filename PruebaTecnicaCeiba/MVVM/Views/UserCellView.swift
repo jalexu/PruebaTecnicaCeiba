@@ -11,7 +11,10 @@ import Resolver
 struct UserCellView: View {
     //MARK: -PROPERTIES
     @State var user: UserModel
-    @State var showPublishingView = false
+    
+    init(user: UserModel) {
+        self.user = user
+    }
     
     //MARK: -BODY
     @ViewBuilder
@@ -50,36 +53,19 @@ struct UserCellView: View {
             }
             
             HStack(alignment: .center, spacing: 2){
-                EmptyView()
                 Spacer()
-                Button(action: {
-                    showPublishingView = true
-                }, label: {
-                    Text("VER PUBLICACIONES")
-                        .font(.footnote)
-                        .foregroundColor(Color("green-app"))
-                        .frame(width: 175, alignment: .center)
-                        .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 6.0)
-                                .stroke(Color("green-app"), lineWidth: 1.5)
-                                .shadow(color: .green, radius: 5))
-                })
+                Text("VER PUBLICACIONES")
+                    .font(.footnote)
+                    .foregroundColor(Color("green-app"))
+                    .frame(width: 175, alignment: .center)
+                    .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6.0)
+                            .stroke(Color("green-app"), lineWidth: 1.5)
+                            .shadow(color: .green, radius: 5))
             }
-            
-            NavigationLink(
-                destination: UserPublishingView(viewModel: getUserPublishingViewModel()),
-                isActive: $showPublishingView,
-                label: {
-                    EmptyView()
-                })
         }
         
-    }
-    
-    private func getUserPublishingViewModel() -> UserPublishingViewModel {
-        UserPublishingViewModel(user: user,
-                                userPublishingInteractor: Resolver.resolve(UserPublishingInteractor.self))
     }
 }
 

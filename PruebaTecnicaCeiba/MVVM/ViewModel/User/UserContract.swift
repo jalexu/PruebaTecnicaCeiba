@@ -10,4 +10,5 @@ import SwiftUI
 protocol UserViewModelType: ObservableObject, Identifiable {
     var state: UserDetailState { get set }
     func getUserService()
+    func getUserPublishingViewModel(user: UserModel) -> UserPublishingViewModel
 }

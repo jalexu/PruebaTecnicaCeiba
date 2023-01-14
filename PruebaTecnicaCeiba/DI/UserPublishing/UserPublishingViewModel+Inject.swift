@@ -17,15 +17,18 @@ extension Resolver {
         register(UserPublishingRepositoryType.self) { _ in
             return GeneralRepository.init().userPublishingRepository
         }
+        .scope(.application)
         
         register(NetworkServiceType.self) { _ in
             return GeneralRepository.init().networkService
         }
+        .scope(.application)
     }
     
     private static func registerUserPublishingViewModelDependencies() {
         register(UserPublishingInteractor.self) { resolver in
             return UserPublishingInteractor(userPublishingRepository: resolver.resolve(UserPublishingRepositoryType.self))
         }
+        .scope(.application)
     }
 }
