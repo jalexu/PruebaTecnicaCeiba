@@ -11,7 +11,6 @@ import SwiftUI
 import Resolver
 
 final class UserViewModel: BaseViewModel {
-    
     private let getUsersInteractor: AnyInteractor<Any?, [UserModel]>
     private let coreDataInteractor: CoreDataRepositoryType
     
@@ -23,6 +22,8 @@ final class UserViewModel: BaseViewModel {
          coreDataInteractor: CoreDataRepositoryType) {
         self.getUsersInteractor = getUsersInteractor
         self.coreDataInteractor = coreDataInteractor
+        super.init()
+        self.errorHandler = self
     }
     
     private func updateState(updater: () -> Void) {
@@ -36,6 +37,7 @@ final class UserViewModel: BaseViewModel {
             .sink(receiveCompletion: { [weak self] completion in
                 guard case .failure(let error) = completion else { return }
                 self?.loading = false
+                self?.handleException(error: error)
             }, receiveValue: { [weak self] users in
                 self?.saveOnCoreData(with: users)
                 self?.loading = false
@@ -49,6 +51,7 @@ final class UserViewModel: BaseViewModel {
     private func saveOnCoreData(with usersData: [UserModel]) {
         self.loading = true
         for data in usersData {
+            self.loading = true
             coreDataInteractor.save(with: data)
                 .sink(receiveCompletion: { [weak self] completion in
                     guard case .failure(let error) = completion else { return }
@@ -56,7 +59,6 @@ final class UserViewModel: BaseViewModel {
                     print(error.localizedDescription)
                 }, receiveValue: { [weak self] _ in
                     self?.loading = false
-                    print("User has been save on coreData")
                 }).store(in: &subscribers)
         }
     }
@@ -95,3 +97,38 @@ extension UserViewModel: UserViewModelType  {
     }
 }
 
+//MARK: Show errors
+extension UserViewModel: ErrorHandlerType {
+    func showError(error: Error) {
+        updateState {
+            self.state.alert = true
+            self.state.alertMessageError = .default
+        }
+    }
+    
+    func hideConnectivityError() {
+        updateState {
+            state.alert = false
+        }
+    }
+    
+    func showLostConnectionError() {
+        updateState {
+            self.state.showConnectionError = true
+        }
+    }
+    
+    func hideLostConnectionError() {
+        updateState {
+            self.state.showConnectionError = false
+        }
+    }
+}
+
+//MARK: Show connection error
+extension UserViewModel: ConnectionRetryable {
+    func tryAgain() {
+        hideLostConnectionError()
+        getUserFromCoreData()
+    }
+}

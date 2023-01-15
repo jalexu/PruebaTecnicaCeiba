@@ -26,6 +26,14 @@
 		C24E282A2973391A00FC296D /* CoreDataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28292973391A00FC296D /* CoreDataInteractor.swift */; };
 		C24E282C297339CB00FC296D /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E282B297339CB00FC296D /* CoreDataRepository.swift */; };
 		C24E282F2973412700FC296D /* CoreData+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E282E2973412700FC296D /* CoreData+Inject.swift */; };
+		C24E2832297377A400FC296D /* ErrorHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E2831297377A400FC296D /* ErrorHandlerType.swift */; };
+		C24E2834297379BE00FC296D /* ErrorProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E2833297379BE00FC296D /* ErrorProcessor.swift */; };
+		C24E28362973804C00FC296D /* AlertMessageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28352973804C00FC296D /* AlertMessageError.swift */; };
+		C24E283829738E4300FC296D /* BaseViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E283729738E4300FC296D /* BaseViewModelState.swift */; };
+		C24E283A2973982F00FC296D /* ConnectionRetryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E28392973982F00FC296D /* ConnectionRetryable.swift */; };
+		C24E283D2973989B00FC296D /* LostInternetErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E283C2973989B00FC296D /* LostInternetErrorView.swift */; };
+		C24E283F297398E000FC296D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E283E297398E000FC296D /* Strings.swift */; };
+		C24E284129739A8E00FC296D /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E284029739A8E00FC296D /* GreenButton.swift */; };
 		C258BCED2972348B00FF089D /* PruebaTecnicaCeibaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BCEC2972348B00FF089D /* PruebaTecnicaCeibaApp.swift */; };
 		C258BCF12972348C00FF089D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258BCF02972348C00FF089D /* Assets.xcassets */; };
 		C258BCF42972348C00FF089D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258BCF32972348C00FF089D /* Preview Assets.xcassets */; };
@@ -92,6 +100,14 @@
 		C24E28292973391A00FC296D /* CoreDataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataInteractor.swift; sourceTree = "<group>"; };
 		C24E282B297339CB00FC296D /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		C24E282E2973412700FC296D /* CoreData+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Inject.swift"; sourceTree = "<group>"; };
+		C24E2831297377A400FC296D /* ErrorHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerType.swift; sourceTree = "<group>"; };
+		C24E2833297379BE00FC296D /* ErrorProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProcessor.swift; sourceTree = "<group>"; };
+		C24E28352973804C00FC296D /* AlertMessageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageError.swift; sourceTree = "<group>"; };
+		C24E283729738E4300FC296D /* BaseViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelState.swift; sourceTree = "<group>"; };
+		C24E28392973982F00FC296D /* ConnectionRetryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRetryable.swift; sourceTree = "<group>"; };
+		C24E283C2973989B00FC296D /* LostInternetErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostInternetErrorView.swift; sourceTree = "<group>"; };
+		C24E283E297398E000FC296D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		C24E284029739A8E00FC296D /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		C258BCE92972348B00FF089D /* PruebaTecnicaCeiba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnicaCeiba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C258BCEC2972348B00FF089D /* PruebaTecnicaCeibaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTecnicaCeibaApp.swift; sourceTree = "<group>"; };
 		C258BCF02972348C00FF089D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -228,6 +244,27 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		C24E28302973777D00FC296D /* ErrorHandler */ = {
+			isa = PBXGroup;
+			children = (
+				C258BD372972460900FF089D /* CostumErrors.swift */,
+				C24E2831297377A400FC296D /* ErrorHandlerType.swift */,
+				C24E2833297379BE00FC296D /* ErrorProcessor.swift */,
+				C24E28352973804C00FC296D /* AlertMessageError.swift */,
+				C24E28392973982F00FC296D /* ConnectionRetryable.swift */,
+			);
+			path = ErrorHandler;
+			sourceTree = "<group>";
+		};
+		C24E283B2973985B00FC296D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C24E283C2973989B00FC296D /* LostInternetErrorView.swift */,
+				C24E284029739A8E00FC296D /* GreenButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		C258BCE02972348B00FF089D = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +300,7 @@
 				C24E28122972FDE500FC296D /* PruebaTecnicaData */,
 				C258BD1729723F1A00FF089D /* DataBase */,
 				C24E28132972FE4300FC296D /* DI */,
+				C24E283B2973985B00FC296D /* Components */,
 				C258BCF22972348C00FF089D /* Preview Content */,
 			);
 			path = PruebaTecnicaCeiba;
@@ -368,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				C258BD2E2972445300FF089D /* BaseViewModel.swift */,
+				C24E283729738E4300FC296D /* BaseViewModelState.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -375,8 +414,9 @@
 		C258BD332972454100FF089D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C24E28302973777D00FC296D /* ErrorHandler */,
 				C258BD352972457700FF089D /* Constants.swift */,
-				C258BD372972460900FF089D /* CostumErrors.swift */,
+				C24E283E297398E000FC296D /* Strings.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -560,6 +600,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C24E2827297337DD00FC296D /* UsersWrapper.swift in Sources */,
+				C24E283829738E4300FC296D /* BaseViewModelState.swift in Sources */,
+				C24E2834297379BE00FC296D /* ErrorProcessor.swift in Sources */,
 				C24E28252973370500FC296D /* CoreDataService.swift in Sources */,
 				C258BD4C297252D800FF089D /* GeneralRepository.swift in Sources */,
 				C258BD222972414700FF089D /* UserPublishingDetailState.swift in Sources */,
@@ -567,6 +609,7 @@
 				C24E28172972FEBB00FC296D /* userViewModel+Inject.swift in Sources */,
 				C258BD362972457700FF089D /* Constants.swift in Sources */,
 				C258BD552972594600FF089D /* UserCellView.swift in Sources */,
+				C24E283A2973982F00FC296D /* ConnectionRetryable.swift in Sources */,
 				C24E28042972DE0000FC296D /* UserPublishingViewModel.swift in Sources */,
 				C258BD3C2972492800FF089D /* APIRequest.swift in Sources */,
 				C258BD2F2972445300FF089D /* BaseViewModel.swift in Sources */,
@@ -577,7 +620,9 @@
 				C24E28022972DD5100FC296D /* UserPublishingRepository.swift in Sources */,
 				C258BD382972460900FF089D /* CostumErrors.swift in Sources */,
 				C24E28212973357200FC296D /* CoreDataManager.swift in Sources */,
+				C24E284129739A8E00FC296D /* GreenButton.swift in Sources */,
 				C258BD1A29723F5000FF089D /* PruebaTecnicaCeibaDB.xcdatamodeld in Sources */,
+				C24E2832297377A400FC296D /* ErrorHandlerType.swift in Sources */,
 				C258BD2A2972429700FF089D /* UserPublishig.swift in Sources */,
 				C258BD4629724A4A00FF089D /* NetworkService.swift in Sources */,
 				C24E28092972E19F00FC296D /* UserPublishingInteractor.swift in Sources */,
@@ -587,9 +632,12 @@
 				C24E282F2973412700FC296D /* CoreData+Inject.swift in Sources */,
 				C24E280B2972E1C700FC296D /* AnyInteractor.swift in Sources */,
 				C24E280F2972F6FA00FC296D /* UserInteractor.swift in Sources */,
+				C24E28362973804C00FC296D /* AlertMessageError.swift in Sources */,
 				C258BD44297249DA00FF089D /* NetworkContract.swift in Sources */,
+				C24E283D2973989B00FC296D /* LostInternetErrorView.swift in Sources */,
 				C24E281F29730AAF00FC296D /* UserPublishingViewModel+Inject.swift in Sources */,
 				C258BD2C2972431700FF089D /* UserPublishingViewModelContract.swift in Sources */,
+				C24E283F297398E000FC296D /* Strings.swift in Sources */,
 				C258BCED2972348B00FF089D /* PruebaTecnicaCeibaApp.swift in Sources */,
 				C24E28112972F9CF00FC296D /* UsersView.swift in Sources */,
 				C24E28192973029C00FC296D /* PruebaTecnicaCeiba+inject.swift in Sources */,

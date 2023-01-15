@@ -81,7 +81,7 @@ extension NetworkService: NetworkServiceType {
                                 retries: Int = 0) -> AnyPublisher<Response, Error> where Response: Decodable
     {
         guard let request = getURLRequest(endpoint) else {
-            return Fail<Response, Error>(error: CostumErrors.ApiRequest.malformedURL)
+            return Fail<Response, Error>(error: CostumErrors.ApiRequest.pageNotFound)
                 .eraseToAnyPublisher()
         }
         
@@ -96,7 +96,7 @@ extension NetworkService: NetworkServiceType {
                 if !(200 ..< 300 ~= httpResponse.statusCode) {
                     
                     let statusCode = CostumErrors.StatusCodes(from: httpResponse.statusCode)
-                    //let error = CostumErrors.ApiRequest(statusCode: statusCode)
+                    let error = CostumErrors.ApiRequest(statusCode: statusCode)
                     
                     debugPrint("Error Endpoint: \(request.url?.absoluteString ?? "")")
                     
@@ -105,7 +105,7 @@ extension NetworkService: NetworkServiceType {
                         debugPrint("** Error Response data: ** : \(resString)")
                     }
                     
-                    throw CostumErrors.ApiRequest.serverError
+                    throw error ?? .serverError
                 }
                 
                 return data
@@ -113,7 +113,12 @@ extension NetworkService: NetworkServiceType {
             .decode(type: Response.self, decoder: decoder)
             .receive(on: queue)
             .retry(retries)
-            .mapError { $0 }
+            .mapError {
+                let erro = $0 as? URLError
+                let statusCode = CostumErrors.StatusCodes(from: erro?.errorCode ?? 0)
+                let error = CostumErrors.ApiRequest(statusCode: statusCode)
+                return error!
+            }
             .eraseToAnyPublisher()
     }
 }

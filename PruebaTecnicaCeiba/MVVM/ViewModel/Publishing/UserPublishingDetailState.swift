@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-final class UserPublishingDetailState: ObservableObject {
+final class UserPublishingDetailState: BaseViewModelState  {
     @Published var listUserPublishig: [UserPublishig] = []
-    @Published var alert: Bool = false
 }

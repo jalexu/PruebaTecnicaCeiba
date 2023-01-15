@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-final class UserDetailState: ObservableObject {
+final class UserDetailState: BaseViewModelState {
     @Published var users: [UserModel] = []
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import Resolver
 import RappleProgressHUD
 
-struct UsersView<ViewModelType>: View where ViewModelType: UserViewModelType {
+struct UsersView<ViewModelType>: View where ViewModelType: UserViewModelType & ErrorHandlerType & ConnectionRetryable{
     
     @State var searchText = ""
     @State var searchUserEmpty = false
@@ -52,7 +52,9 @@ struct UsersView<ViewModelType>: View where ViewModelType: UserViewModelType {
     var emptyView: some View {
         VStack(alignment: .center) {
             Spacer()
-            Text("This item doesn't exist!")
+            Text(Strings.userDoesnotExistMessage)
+                .foregroundColor(Color("light-gray"))
+                .font(.system(size: 28, weight: .semibold))
             Spacer()
         }
     }
@@ -64,12 +66,6 @@ struct UsersView<ViewModelType>: View where ViewModelType: UserViewModelType {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(searchText.isEmpty ? Color("green-app") : Color(.gray))
                     
-                        .alert(isPresented: $searchUserEmpty) {
-                            Alert(title: Text(Constants.MessagesError.title),
-                                  message: Text(Constants.MessagesError.listEmpty),
-                                  dismissButton: .default(Text(Constants.MessagesError.okButton)))
-                        }
-                    
                     ZStack(alignment: .leading) {
                         if searchText.isEmpty {
                             Text(Constants.TextDescription.searchUser)
@@ -80,7 +76,14 @@ struct UsersView<ViewModelType>: View where ViewModelType: UserViewModelType {
                         
                         TextField("", text: $searchText ).foregroundColor(.black)
                     }
-                    
+                    .alert(isPresented: $searchUserEmpty) {
+                        Alert(title: Text(Constants.MessagesError.title),
+                              message: Text(Constants.MessagesError.listEmpty),
+                              dismissButton: .default(Text(Constants.MessagesError.okButton)))
+                    }
+                    .sheet(isPresented: $viewModel.state.showConnectionError) {
+                        LostInternetErrorView(conectionRetryable: viewModel.self)
+                    }
                 }
                 .padding([.top, .leading], 10.0)
                 

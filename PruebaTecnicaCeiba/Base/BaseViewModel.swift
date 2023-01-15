@@ -7,7 +7,9 @@
 
 import RappleProgressHUD
 
-class BaseViewModel {
+class BaseViewModel: ErrorProcessorType {
+    
+    weak var errorHandler: ErrorHandlerType?
     
     init() { }
     
@@ -19,5 +21,9 @@ class BaseViewModel {
                 RappleActivityIndicatorView.stopAnimation(completionIndicator: .success, completionLabel: "Completed.", completionTimeout: 1.0)
             }
         }
+    }
+    
+    func handleException(error: Error) {
+        handleExceptionError(error: error)
     }
 }

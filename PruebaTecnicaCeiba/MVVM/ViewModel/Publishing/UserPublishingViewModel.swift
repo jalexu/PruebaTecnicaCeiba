@@ -20,6 +20,8 @@ final class UserPublishingViewModel: BaseViewModel {
          userPublishingInteractor: AnyInteractor<Int, [UserPublishig]>) {
         self.user = user
         self.userPublishingInteractor = userPublishingInteractor
+        super.init()
+        self.errorHandler = self
     }
     
     private func updateState(updater: () -> Void) {
@@ -34,6 +36,7 @@ final class UserPublishingViewModel: BaseViewModel {
             .sink(receiveCompletion: { [weak self] completion in
                 guard case .failure(let error) = completion else { return }
                 self?.loading = false
+                self?.handleException(error: error)
             }, receiveValue: { [weak self] publishigValues in
                 self?.loading = false
                 self?.updateState {
@@ -49,3 +52,41 @@ extension UserPublishingViewModel: UserPublishingViewModelType {
         getPublishing()
     }
 }
+
+//MARK: Show errors
+extension UserPublishingViewModel: ErrorHandlerType {
+    func showError(error: Error) {
+        updateState {
+            self.state.alert = true
+            self.state.alertMessageError = .default
+        }
+    }
+    
+    func hideConnectivityError() {
+        updateState {
+            state.alert = false
+        }
+    }
+    
+    func showLostConnectionError() {
+        updateState {
+            self.state.showConnectionError = true
+        }
+    }
+    
+    func hideLostConnectionError() {
+        updateState {
+            self.state.showConnectionError = false
+        }
+    }
+}
+
+//MARK: Show connection error
+extension UserPublishingViewModel: ConnectionRetryable {
+    func tryAgain() {
+        hideLostConnectionError()
+        getPublishing()
+    }
+}
+
+
