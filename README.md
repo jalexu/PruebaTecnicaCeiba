@@ -3,8 +3,8 @@ Esto es una prueba
 
 #Detalles de la prueba:
 
-Arquitectura MVVM/n
-Se desarrolla con SwiftUI
+Arquitectura MVVM<br>
+Se desarrolla con SwiftUI,
 Se utiliza Combine
 Soporte desde iOS 14
 Injection de dependencies con Resolver
