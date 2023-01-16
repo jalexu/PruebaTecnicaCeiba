@@ -2,6 +2,7 @@
 Esto es una prueba
 
 #Detalles de la prueba:
+
 Arquitectura MVVM
 Se desarrolla con SwiftUI
 Se utiliza Combine
