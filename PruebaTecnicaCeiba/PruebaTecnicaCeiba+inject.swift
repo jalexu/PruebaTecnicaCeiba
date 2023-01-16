@@ -15,4 +15,3 @@ extension Resolver: ResolverRegistering {
         registerUserPublishingDependencies()
     }
 }
-

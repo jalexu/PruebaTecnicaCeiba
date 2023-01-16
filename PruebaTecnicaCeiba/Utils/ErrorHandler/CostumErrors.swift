@@ -18,9 +18,9 @@ public enum CostumErrors: Error, Equatable {
     
     enum StatusCodes: Int {
         case successStatusCode = 200
+        case notInternetConnection = -1009
         case pageNotFound = 404
         case internalServerErrorStatusCode = 500
-        case notInternetConnection = -1009
         
         init(from rawValue: Int) {
             self = StatusCodes(rawValue: rawValue) ?? .internalServerErrorStatusCode

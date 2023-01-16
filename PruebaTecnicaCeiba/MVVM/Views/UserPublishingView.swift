@@ -37,6 +37,5 @@ struct UserPublishingView<ViewModelType>: View where ViewModelType: UserPublishi
                 LostInternetErrorView(conectionRetryable: viewModel.self)
             }
         }
-        
     }
 }
