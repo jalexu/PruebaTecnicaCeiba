@@ -1,5 +1,3 @@
-# PruebaTecnicaCeiba
-
 # Detalles de la prueba:
 
 Arquitectura MVVM<br>
