@@ -13,7 +13,7 @@ struct AlertMessageError {
     
     static var `default`: AlertMessageError {
         .init(title: "Error",
-              message: "The application experienced an error. Please try again later.",
+              message: "La aplicación presenta un error, Por favor intenta más tarde.",
               cancelButtonMessage: "Ok")
     }
 }

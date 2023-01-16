@@ -9,7 +9,6 @@ import SwiftUI
 import Resolver
 
 struct UserCellView: View {
-    //MARK: -PROPERTIES
     @State var user: UserModel
     
     init(user: UserModel) {
@@ -19,7 +18,6 @@ struct UserCellView: View {
     //MARK: -BODY
     @ViewBuilder
     var body: some View {
-        
         VStack(alignment: .leading, spacing: 20) {
             
             VStack(alignment: .leading, spacing: 5){
@@ -40,7 +38,6 @@ struct UserCellView: View {
                 }
                 
                 HStack(alignment: .center, spacing: 3){
-                    
                     Image(systemName: "envelope.fill")
                         .foregroundColor(Color("green-app"))
                     
@@ -49,7 +46,6 @@ struct UserCellView: View {
                         .multilineTextAlignment(.leading)
                         .lineLimit(2)
                 }
-                
             }
             
             HStack(alignment: .center, spacing: 2){

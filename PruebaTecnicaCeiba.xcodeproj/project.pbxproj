@@ -37,7 +37,6 @@
 		C258BCED2972348B00FF089D /* PruebaTecnicaCeibaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BCEC2972348B00FF089D /* PruebaTecnicaCeibaApp.swift */; };
 		C258BCF12972348C00FF089D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258BCF02972348C00FF089D /* Assets.xcassets */; };
 		C258BCF42972348C00FF089D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258BCF32972348C00FF089D /* Preview Assets.xcassets */; };
-		C258BCFE2972348C00FF089D /* PruebaTecnicaCeibaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BCFD2972348C00FF089D /* PruebaTecnicaCeibaTests.swift */; };
 		C258BD082972348C00FF089D /* PruebaTecnicaCeibaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD072972348C00FF089D /* PruebaTecnicaCeibaUITests.swift */; };
 		C258BD0A2972348C00FF089D /* PruebaTecnicaCeibaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD092972348C00FF089D /* PruebaTecnicaCeibaUITestsLaunchTests.swift */; };
 		C258BD1A29723F5000FF089D /* PruebaTecnicaCeibaDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C258BD1829723F5000FF089D /* PruebaTecnicaCeibaDB.xcdatamodeld */; };
@@ -45,7 +44,6 @@
 		C258BD242972420C00FF089D /* UserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD232972420C00FF089D /* UserContract.swift */; };
 		C258BD262972422E00FF089D /* UserDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD252972422E00FF089D /* UserDetailState.swift */; };
 		C258BD282972425D00FF089D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD272972425D00FF089D /* UserModel.swift */; };
-		C258BD2A2972429700FF089D /* UserPublishig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD292972429700FF089D /* UserPublishig.swift */; };
 		C258BD2C2972431700FF089D /* UserPublishingViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD2B2972431700FF089D /* UserPublishingViewModelContract.swift */; };
 		C258BD2F2972445300FF089D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD2E2972445300FF089D /* BaseViewModel.swift */; };
 		C258BD32297244AB00FF089D /* RappleProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C258BD31297244AB00FF089D /* RappleProgressHUD */; };
@@ -61,6 +59,21 @@
 		C258BD4F2972531800FF089D /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = C258BD4E2972531800FF089D /* Resolver */; };
 		C258BD512972534700FF089D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD502972534700FF089D /* UserRepository.swift */; };
 		C258BD552972594600FF089D /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD542972594600FF089D /* UserCellView.swift */; };
+		C27E288D297432B800C71075 /* Resolver+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E288C297432B800C71075 /* Resolver+Test.swift */; };
+		C27E288F2974345000C71075 /* AnyInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E288E2974345000C71075 /* AnyInteractorStub.swift */; };
+		C27E289129743A5600C71075 /* UserInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E289029743A5600C71075 /* UserInteractorStub.swift */; };
+		C27E289329743AE100C71075 /* UserPublishingInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E289229743AE100C71075 /* UserPublishingInteractorStub.swift */; };
+		C27E289729743CBE00C71075 /* UserViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E289629743CBE00C71075 /* UserViewModelTest.swift */; };
+		C27E289929743D7300C71075 /* CoreDataInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E289829743D7300C71075 /* CoreDataInteractorStub.swift */; };
+		C27E289F29745FE000C71075 /* UserPublishig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258BD292972429700FF089D /* UserPublishig.swift */; };
+		C27E28A12974B4F300C71075 /* UserPublishingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E28A02974B4F300C71075 /* UserPublishingViewModelTest.swift */; };
+		C27E28A32974BCDE00C71075 /* UserInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E28A22974BCDE00C71075 /* UserInteractorTest.swift */; };
+		C27E28A82974BDC100C71075 /* UserRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E28A72974BDC100C71075 /* UserRepositoryStub.swift */; };
+		C27E28AA2974CA9300C71075 /* UserPublishingInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E28A92974CA9300C71075 /* UserPublishingInteractorTest.swift */; };
+		C27E28AC2974CB0900C71075 /* UserPublishingRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E28AB2974CB0900C71075 /* UserPublishingRepositoryStub.swift */; };
+		C27E28AE2974D2A300C71075 /* UserRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E28AD2974D2A300C71075 /* UserRepositoryTest.swift */; };
+		C27E28B02974D38100C71075 /* NetworkServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E28AF2974D38100C71075 /* NetworkServiceStub.swift */; };
+		C27E28B22974D85500C71075 /* UserPublishingRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E28B12974D85500C71075 /* UserPublishingRepositoryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,7 +126,6 @@
 		C258BCF02972348C00FF089D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C258BCF32972348C00FF089D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C258BCF92972348C00FF089D /* PruebaTecnicaCeibaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaTecnicaCeibaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C258BCFD2972348C00FF089D /* PruebaTecnicaCeibaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTecnicaCeibaTests.swift; sourceTree = "<group>"; };
 		C258BD032972348C00FF089D /* PruebaTecnicaCeibaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaTecnicaCeibaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C258BD072972348C00FF089D /* PruebaTecnicaCeibaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTecnicaCeibaUITests.swift; sourceTree = "<group>"; };
 		C258BD092972348C00FF089D /* PruebaTecnicaCeibaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTecnicaCeibaUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -136,6 +148,20 @@
 		C258BD4B297252D800FF089D /* GeneralRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRepository.swift; sourceTree = "<group>"; };
 		C258BD502972534700FF089D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		C258BD542972594600FF089D /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		C27E288C297432B800C71075 /* Resolver+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Test.swift"; sourceTree = "<group>"; };
+		C27E288E2974345000C71075 /* AnyInteractorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyInteractorStub.swift; sourceTree = "<group>"; };
+		C27E289029743A5600C71075 /* UserInteractorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractorStub.swift; sourceTree = "<group>"; };
+		C27E289229743AE100C71075 /* UserPublishingInteractorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingInteractorStub.swift; sourceTree = "<group>"; };
+		C27E289629743CBE00C71075 /* UserViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTest.swift; sourceTree = "<group>"; };
+		C27E289829743D7300C71075 /* CoreDataInteractorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataInteractorStub.swift; sourceTree = "<group>"; };
+		C27E28A02974B4F300C71075 /* UserPublishingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingViewModelTest.swift; sourceTree = "<group>"; };
+		C27E28A22974BCDE00C71075 /* UserInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractorTest.swift; sourceTree = "<group>"; };
+		C27E28A72974BDC100C71075 /* UserRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryStub.swift; sourceTree = "<group>"; };
+		C27E28A92974CA9300C71075 /* UserPublishingInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingInteractorTest.swift; sourceTree = "<group>"; };
+		C27E28AB2974CB0900C71075 /* UserPublishingRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingRepositoryStub.swift; sourceTree = "<group>"; };
+		C27E28AD2974D2A300C71075 /* UserRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTest.swift; sourceTree = "<group>"; };
+		C27E28AF2974D38100C71075 /* NetworkServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceStub.swift; sourceTree = "<group>"; };
+		C27E28B12974D85500C71075 /* UserPublishingRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublishingRepositoryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +222,7 @@
 		C24E28122972FDE500FC296D /* PruebaTecnicaData */ = {
 			isa = PBXGroup;
 			children = (
+				C24E28052972E15500FC296D /* Interactor */,
 				C258BD4A297252A800FF089D /* Repository */,
 				C258BD392972488900FF089D /* Network */,
 			);
@@ -296,7 +323,6 @@
 				C258BD2D2972442F00FF089D /* Base */,
 				C258BD332972454100FF089D /* Utils */,
 				C258BD472972518300FF089D /* Extension */,
-				C24E28052972E15500FC296D /* Interactor */,
 				C24E28122972FDE500FC296D /* PruebaTecnicaData */,
 				C258BD1729723F1A00FF089D /* DataBase */,
 				C24E28132972FE4300FC296D /* DI */,
@@ -317,7 +343,10 @@
 		C258BCFC2972348C00FF089D /* PruebaTecnicaCeibaTests */ = {
 			isa = PBXGroup;
 			children = (
-				C258BCFD2972348C00FF089D /* PruebaTecnicaCeibaTests.swift */,
+				C27E289529743C6C00C71075 /* UserTest */,
+				C27E289429743C5900C71075 /* PublisingTest */,
+				C27E288B2974328400C71075 /* Stubs */,
+				C27E288A2974327C00C71075 /* Resolver */,
 			);
 			path = PruebaTecnicaCeibaTests;
 			sourceTree = "<group>";
@@ -457,6 +486,72 @@
 				C24E282B297339CB00FC296D /* CoreDataRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		C27E288A2974327C00C71075 /* Resolver */ = {
+			isa = PBXGroup;
+			children = (
+				C27E288C297432B800C71075 /* Resolver+Test.swift */,
+			);
+			path = Resolver;
+			sourceTree = "<group>";
+		};
+		C27E288B2974328400C71075 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				C27E288E2974345000C71075 /* AnyInteractorStub.swift */,
+				C27E28A62974BD8A00C71075 /* CoreData */,
+				C27E28A52974BD7000C71075 /* Publishing */,
+				C27E28A42974BD6200C71075 /* user */,
+				C27E28AF2974D38100C71075 /* NetworkServiceStub.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		C27E289429743C5900C71075 /* PublisingTest */ = {
+			isa = PBXGroup;
+			children = (
+				C27E28A02974B4F300C71075 /* UserPublishingViewModelTest.swift */,
+				C27E28A92974CA9300C71075 /* UserPublishingInteractorTest.swift */,
+				C27E28B12974D85500C71075 /* UserPublishingRepositoryTest.swift */,
+			);
+			path = PublisingTest;
+			sourceTree = "<group>";
+		};
+		C27E289529743C6C00C71075 /* UserTest */ = {
+			isa = PBXGroup;
+			children = (
+				C27E289629743CBE00C71075 /* UserViewModelTest.swift */,
+				C27E28A22974BCDE00C71075 /* UserInteractorTest.swift */,
+				C27E28AD2974D2A300C71075 /* UserRepositoryTest.swift */,
+			);
+			path = UserTest;
+			sourceTree = "<group>";
+		};
+		C27E28A42974BD6200C71075 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				C27E289029743A5600C71075 /* UserInteractorStub.swift */,
+				C27E28A72974BDC100C71075 /* UserRepositoryStub.swift */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+		C27E28A52974BD7000C71075 /* Publishing */ = {
+			isa = PBXGroup;
+			children = (
+				C27E289229743AE100C71075 /* UserPublishingInteractorStub.swift */,
+				C27E28AB2974CB0900C71075 /* UserPublishingRepositoryStub.swift */,
+			);
+			path = Publishing;
+			sourceTree = "<group>";
+		};
+		C27E28A62974BD8A00C71075 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C27E289829743D7300C71075 /* CoreDataInteractorStub.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,7 +718,6 @@
 				C24E284129739A8E00FC296D /* GreenButton.swift in Sources */,
 				C258BD1A29723F5000FF089D /* PruebaTecnicaCeibaDB.xcdatamodeld in Sources */,
 				C24E2832297377A400FC296D /* ErrorHandlerType.swift in Sources */,
-				C258BD2A2972429700FF089D /* UserPublishig.swift in Sources */,
 				C258BD4629724A4A00FF089D /* NetworkService.swift in Sources */,
 				C24E28092972E19F00FC296D /* UserPublishingInteractor.swift in Sources */,
 				C24E281B297307BE00FC296D /* UserPublishingCellView.swift in Sources */,
@@ -642,6 +736,7 @@
 				C24E28112972F9CF00FC296D /* UsersView.swift in Sources */,
 				C24E28192973029C00FC296D /* PruebaTecnicaCeiba+inject.swift in Sources */,
 				C258BD512972534700FF089D /* UserRepository.swift in Sources */,
+				C27E289F29745FE000C71075 /* UserPublishig.swift in Sources */,
 				C24E282A2973391A00FC296D /* CoreDataInteractor.swift in Sources */,
 				C24E280D2972F59A00FC296D /* UserViewModel.swift in Sources */,
 				C258BD49297251AC00FF089D /* URLSession+Extension.swift in Sources */,
@@ -652,7 +747,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C258BCFE2972348C00FF089D /* PruebaTecnicaCeibaTests.swift in Sources */,
+				C27E28A12974B4F300C71075 /* UserPublishingViewModelTest.swift in Sources */,
+				C27E28B02974D38100C71075 /* NetworkServiceStub.swift in Sources */,
+				C27E289329743AE100C71075 /* UserPublishingInteractorStub.swift in Sources */,
+				C27E28AE2974D2A300C71075 /* UserRepositoryTest.swift in Sources */,
+				C27E28A82974BDC100C71075 /* UserRepositoryStub.swift in Sources */,
+				C27E289729743CBE00C71075 /* UserViewModelTest.swift in Sources */,
+				C27E28AC2974CB0900C71075 /* UserPublishingRepositoryStub.swift in Sources */,
+				C27E288F2974345000C71075 /* AnyInteractorStub.swift in Sources */,
+				C27E289929743D7300C71075 /* CoreDataInteractorStub.swift in Sources */,
+				C27E28AA2974CA9300C71075 /* UserPublishingInteractorTest.swift in Sources */,
+				C27E28A32974BCDE00C71075 /* UserInteractorTest.swift in Sources */,
+				C27E28B22974D85500C71075 /* UserPublishingRepositoryTest.swift in Sources */,
+				C27E288D297432B800C71075 /* Resolver+Test.swift in Sources */,
+				C27E289129743A5600C71075 /* UserInteractorStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
