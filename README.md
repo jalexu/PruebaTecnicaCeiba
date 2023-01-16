@@ -1,7 +1,6 @@
 # PruebaTecnicaCeiba
-Esto es una prueba
 
-#Detalles de la prueba:
+# Detalles de la prueba:
 
 Arquitectura MVVM<br>
 Se desarrolla con SwiftUI<br>
