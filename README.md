@@ -3,7 +3,7 @@ Esto es una prueba
 
 #Detalles de la prueba:
 
-Arquitectura MVVM
+Arquitectura MVVM/n
 Se desarrolla con SwiftUI
 Se utiliza Combine
 Soporte desde iOS 14
